@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Just For You 💚</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #064e3b, #022c22);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', sans-serif;
+            color: #e6fffa;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.55);
+            width: 380px;
+            padding: 28px 24px;
+            border-radius: 24px;
+            text-align: center;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.7);
+            animation: fadeIn 1.5s ease;
+        }
+
+        .photo {
+            width: 155px;
+            height: 155px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #6ee7b7;
+            margin-bottom: 18px;
+            animation: glow 3s infinite alternate;
+        }
+
+        h1 {
+            color: #6ee7b7;
+            margin-bottom: 6px;
+            font-size: 26px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            opacity: 0.85;
+            margin-bottom: 18px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 22px;
+        }
+
+        button {
+            background: #10b981;
+            color: #022c22;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #6ee7b7;
+            transform: scale(1.05);
+        }
+
+        #message {
+            margin-top: 22px;
+            display: none;
+            font-size: 17px;
+            line-height: 1.7;
+            animation: pop 0.6s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pop {
+            from { opacity: 0; transform: scale(0.85); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes glow {
+            from { box-shadow: 0 0 8px #6ee7b7; }
+            to { box-shadow: 0 0 18px #6ee7b7; }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+    <img src="her.jpg" alt="Her Photo" class="photo">
+
+    <h1 id="title"></h1>
+    <div class="subtitle">Some feelings don’t need volume.</div>
+
+    <p>
+        I didn’t make this to impress you.<br>
+        I made it because some people deserve<br>
+        a quiet kind of honesty.
+    </p>
+
+    <button onclick="showLove()">Read slowly 💚</button>
+
+    <div id="message"></div>
+</div>
+
+<script>
+    let gfName = "Ayesha"; // 🔁 CHANGE NAME HERE
+
+    document.getElementById("title").innerText =
+        "Hey " + gfName + " 💚";
+
+    function showLove() {
+        let msg = document.getElementById("message");
+        msg.style.display = "block";
+        msg.innerHTML =
+            "You don’t try to shine.<br>" +
+            "You don’t need to be loud.<br><br>" +
+
+            "You just exist so calmly,<br>" +
+            "and somehow… that changes the room 🌿<br><br>" +
+
+            "I like you.<br>" +
+            "Not as a moment.<br>" +
+            "But as a feeling.";
+    }
+</script>
+
+</body>
+</html>
